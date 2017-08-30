@@ -39,7 +39,13 @@ export class HeroesService {
               console.log(res.json());
               return res.json();
             })
+  }
 
+  getHeroe(key$:string){
+    let url = `${ this.heroeURL }/${ key$ }.json`;
+
+    return this.http.get(url)
+            .map(res=>res.json());
   }
 
 }
