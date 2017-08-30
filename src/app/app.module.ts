@@ -5,6 +5,9 @@ import { FormsModule } from '@angular/forms';
 
 import {APP_ROUTING} from './app.routes';
 
+//Servicios
+import { HeroesService } from '../app/services/heroes.service';
+
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroes/heroe.component';
@@ -21,9 +24,9 @@ import { HeroeComponent } from './components/heroes/heroe.component';
     FormsModule,
     HttpModule,
     APP_ROUTING
-
   ],
   providers: [
+    HeroesService
   ],
   bootstrap: [AppComponent]
 })
